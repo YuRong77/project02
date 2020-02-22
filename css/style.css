@@ -1,0 +1,422 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Microsoft JhengHei';
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #dff1fa;
+}
+
+.banner{
+    text-align: center;
+    background-image: url(../img/banner.JPG);
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.banner h1{
+    font-size: 72px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    padding-top: 60px;
+}
+
+.weather{
+    display: flex;
+    background: #55bbeb;
+    padding: 20px 35px;
+    margin-bottom: 20px;
+    border-top: 3px solid #239ad1;
+    border-bottom: 3px solid #239ad1;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    height: 200px;
+}
+
+.weather h3{
+    font-size: 30px;
+    margin: 84px auto;
+}
+
+.msg{
+    font-weight: bold;
+}
+
+.temp{
+    background: #05a8da;
+    border-radius: 60px;
+    box-shadow: 0px 2px 5px #222121;
+}
+
+.temp h5{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.pic{
+    position: relative;
+    margin-left: 80px;
+    width: 300px;
+}
+
+.place{
+   font-size: 30px;
+   margin-bottom: 20px;
+}
+
+.wea{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.rain{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.uv{
+    margin-bottom: 5px;
+}
+
+.time-s{
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.time-e{
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.avg{
+    width: 350px;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 30px;
+ }
+ 
+
+.low{
+    font-size: 20px;
+    display: inline-block;
+    width: 172px;
+    text-align: center;
+    margin: 0;
+}
+
+.high{
+    font-size: 20px;
+    display: inline-block;
+    width: 172px;
+    text-align: center;
+    margin: 0;
+    
+}
+
+
+
+
+.area{
+    margin-left: 30px;
+}
+
+.area ul{
+    display: flex;
+}
+
+.area h3{
+    font-size: 22px;
+}
+
+.area li{
+    width: 100px;
+    height: 40px;
+    margin: 20px 20px 20px 0;
+}
+
+.area li a{
+    display: block;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.north li a{
+    background: #ff2c2c;
+}
+
+.north li a:hover{
+    background: #d32424;
+}
+
+.central li a{
+    background: #fc9e23;
+}
+
+.central li a:hover{
+    background: #cc801c;
+}
+
+.south li a{
+    background: #17bd3b;
+}
+
+.south li a:hover{
+    background: #119b2f;
+}
+
+.east li a{
+    background: #29b3f3;
+}
+
+.east li a:hover{
+    background: #1f8bbd;
+}
+
+.outer li a{
+    background: #9e5aec;
+}
+
+.outer li a:hover{
+    background: #7140a8;
+}
+
+.sunny{
+    display: none;
+}
+
+.sun{
+    position: absolute;
+    top: 40px;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    background: #fbff00;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fffb01,
+                0 0 20px #fffb01;
+    animation-name: sun;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;            
+}
+
+.cloud3{
+    position: absolute;
+    bottom: 60px;
+    animation-name: move;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+.cloud4{
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    animation-name: move2;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move{
+    from{
+        left: 0px;
+    }
+    to{
+        left: 200px;
+    }
+}
+@keyframes move2{
+    from{
+        right: 0px;
+    }
+    to{
+        right: 200px;
+    }
+}
+@keyframes sun{
+    0%{
+    box-shadow: 0 0 10px #f1ef50,
+                0 0 10px #ffff00;
+    }
+    50%{
+    box-shadow: 0 0 40px #f1ef50,
+                0 0 40px #ffff00;
+    }
+    90%{
+    box-shadow: 0 0 20px #f1ef50,
+                0 0 20px #ffff00;
+    }
+}
+
+.cloudy{
+    display: none;
+}
+
+.cloud1{
+    position: absolute;
+    top: 40px;
+    animation-name: move3;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+.cloud2{
+    position: absolute;
+    bottom: 60px;
+    right: 100px;
+    animation-name: move4;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    
+}
+
+.cloud5{
+    position: absolute;
+    top: 65px;
+    left: 90px;
+    animation-name: move5;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes move3{
+    from{
+        left: 0px;
+    }
+    to{
+        left: 100px;
+    }
+}
+
+@keyframes move4{
+    from{
+        right: 100px;
+    }
+    to{
+        right: 30px;
+    }
+}
+
+@keyframes move5{
+    from{
+        left: 90px;
+    }
+    to{
+        left: 140px;
+    }
+}
+
+.rainnday{
+    display: none;
+}
+
+.cloud6{
+    width: 180px;
+    position: absolute;
+    left: 30px;
+}
+
+.drop{
+    position: absolute;
+    top: 110px;
+    left: 60px;
+    width: 10px;
+    height: 20px;
+    animation-duration: 1s;
+}
+.drop2{
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    width: 10px;
+    height: 20px;
+    animation-duration: 1.5s;
+}
+.drop3{
+    position: absolute;
+    top: 110px;
+    right: 110px;
+    width: 10px;
+    height: 20px;
+    animation-duration: 1.4s;
+}
+.drop4{
+    position: absolute;
+    top: 150px;
+    left: 130px;
+    width: 10px;
+    height: 20px;
+    animation-duration: 1.2s;
+}
+
+.dropdown{
+    animation-name: drop;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+
+@keyframes drop{
+    from{
+        top: 110px;
+    }
+    to{
+        top: 160px;
+    }
+}
+
+.footer{
+    background: #6fc2e9;
+}
+
+.footer h3{
+    text-align: center;
+    padding: 15px 0;
+}
